@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 817.69 785.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eee;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="408.85" cy="392.71" r="98.71"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="408.85" cy="679.86" r="98.71"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-1" cx="408.85" cy="105.55" r="98.71"/>
+</svg>

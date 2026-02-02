@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 817.69 785.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #8db332;
+      }
+    </style>
+  </defs>
+  <g id="Profil">
+    <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-2" cx="306.45" cy="324.65" r="168.22"/>
+    <path id="Rechteck_12" data-name="Rechteck 12" class="cls-2" d="M284.51,507.49h43.88c153.49,0,277.92,124.43,277.92,277.92H6.59c0-153.49,124.43-277.92,277.92-277.92Z"/>
+  </g>
+  <g id="Profil-2">
+    <circle id="Ellipse_4-2" data-name="Ellipse 4-2" class="cls-1" cx="511.24" cy="324.65" r="168.22"/>
+    <path id="Rechteck_12-2" data-name="Rechteck 12-2" class="cls-1" d="M489.3,507.49h43.88c153.49,0,277.92,124.43,277.92,277.92H211.38c0-153.49,124.43-277.92,277.92-277.92Z"/>
+  </g>
+</svg>
