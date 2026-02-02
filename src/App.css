@@ -27,6 +27,12 @@ body {
   overflow: hidden;
 }
 
+.screen {
+  height: 100%;
+  padding-bottom: 64px; /* Höhe deiner BottomNav */
+}
+
+
 @media (min-width: 768px) {
   .app {
     height: 844px; /* iPhone 12 Pro Höhe */

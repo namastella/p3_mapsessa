@@ -37,14 +37,28 @@
   background: none;
   border: none;
   padding: 8px;
-  color: rgba(255, 255, 255, 0.7);
+
+  /* wichtig für SVG-Farbe via currentColor */
+  color: rgba(255, 255, 255, 0.65);
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  text-decoration: none; /* weil NavLink ein <a> ist */
 }
 
 .nav-item svg {
   width: 24px;
   height: 24px;
+}
+
+/* ACTIVE */
+.nav-item.is-active {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Optional: kleines Touch-Feedback */
+.nav-item:active {
+  transform: scale(0.96);
 }
