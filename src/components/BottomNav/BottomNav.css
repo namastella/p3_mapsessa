@@ -12,6 +12,7 @@
 
   background: #0E3296;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000; 
 
   /*padding-bottom: env(safe-area-inset-bottom);  ---> später mal checken, Vorschlag kam von Chatgpt*/
 }

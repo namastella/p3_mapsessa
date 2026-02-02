@@ -6,7 +6,7 @@ import ProfileIcon from "../../assets/icons/profil.svg?react";
 import NetworkIcon from "../../assets/icons/netzwerk.svg?react";
 import MenuIcon from "../../assets/icons/menu.svg?react";
 
-export function BottomNav() {
+export function BottomNav({ onMenu }) {
   return (
     <nav className="bottom-nav" aria-label="Bottom Navigation">
       <NavLink
@@ -34,7 +34,7 @@ export function BottomNav() {
         <ProfileIcon />
       </NavLink>
 
-      <button className="menu-button" aria-label="Menü öffnen">
+      <button className="menu-button" onClick={onMenu} aria-label="Menü öffnen">
         <MenuIcon />
       </button>
     </nav>
