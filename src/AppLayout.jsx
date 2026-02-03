@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { BottomNav } from "./components/BottomNav/BottomNav";
 import { Menu } from "./components/Menu/Menu";
+import { Score } from "./components/Score/Score";
 import "./App.css";
 
 export function AppLayout() {
@@ -9,6 +10,7 @@ export function AppLayout() {
 
   return (
     <div className="app">
+        <Score />
         
       <main className="screen">
         <Outlet />
