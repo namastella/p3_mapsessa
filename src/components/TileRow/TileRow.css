@@ -1,0 +1,25 @@
+.tile-row {
+  display: flex;
+  gap: 14px;
+
+  overflow-x: auto;
+  padding: 4px 16px 10px;  /* links/rechts etwas „Screen-Padding“ */
+  margin: 0 -16px;         /* damit es bis zum Rand „läuft“ */
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tile-row > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* optional: Scrollbar dezenter */
+.tile-row::-webkit-scrollbar {
+  height: 8px;
+}
+.tile-row::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+}
