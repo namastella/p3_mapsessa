@@ -1,11 +1,12 @@
 #root {
   min-height: 100vh;
-  background: #e5e5e5; /* Desktop-Hintergrund */
+  background: #e5e5e5;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px; 
+  box-sizing: border-box;
 }
-
 
 * {
   box-sizing: border-box;
@@ -19,23 +20,29 @@ body {
 
 .app {
   width: 100%;
-  max-width: 430px;   /* iPhone 14 Pro Max */
+  max-width: 430px;
   height: 100vh;
 
-  background: #fff;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
+  flex: 0 0 auto;
 }
+
 
 .screen {
   height: 100%;
-  padding-bottom: 64px; /* Höhe deiner BottomNav */
+  padding-bottom: 64px; 
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .app {
-    height: 844px; /* iPhone 12 Pro Höhe */
+    width: min(390px, calc(100vw - 48px));
+    aspect-ratio: 390 / 844;   
+    height: auto;             
+
+    max-width: none;
     border-radius: 28px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   }

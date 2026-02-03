@@ -30,12 +30,15 @@
 }
 
 .menu-handle {
-  width: 36px;
-  height: 4px;
+  width: 44px;
+  height: 5px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.2);
-  margin: 8px auto 12px;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 10px auto 14px;
+  background: hotpink !important;
 }
+
+
 
 
 .menu-header {
