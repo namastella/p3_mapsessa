@@ -1,6 +1,7 @@
 export const REWARDS = [
   {
     id: "kino",
+    shortTitle: "Kino Gutschein",
     title: "Gutschein für einen Film für eine Person im Citydome, Kinopolis oder Rex*",
     points: 110,
     image: "https://placehold.co/800x400",
@@ -13,6 +14,7 @@ export const REWARDS = [
   },
   {
     id: "heinerliner",
+    shortTitle: "Heinerliner Freifahrt",
     title: "Heinerliner Freifahrt",
     points: 50,
     image: "https://placehold.co/800x400",

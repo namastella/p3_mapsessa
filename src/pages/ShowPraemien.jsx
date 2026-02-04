@@ -24,7 +24,7 @@ export function ShowPraemien() {
         {REWARDS.map((r) => (
           <RewardTile
             key={r.id}
-            title={r.title}
+            title={r.shortTitle}
             imageSrc={r.image}
             onClick={() => navigate(`/praemien/${r.id}`)}
           />
