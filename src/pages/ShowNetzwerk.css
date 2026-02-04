@@ -1,0 +1,116 @@
+.netzwerk-page {
+  height: 100%;
+  overflow-y: auto;
+  background: #f5f5f5;
+  padding-bottom: 96px; /* Platz für BottomNav */
+}
+
+/* Header oben */
+.netzwerk-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  padding: 14px 16px;
+  background: #f5f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.netzwerk-top__title {
+  font-size: 22px;
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+/* "Aufruf starten" Button oben */
+.start-call-btn {
+  height: 34px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 6px;
+  background: #0e3296;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.feed {
+  padding: 10px 16px 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.call-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.call-card__header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.call-card__name {
+  color: #0e3296;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.call-card__handle {
+  color: #6b6b6b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.call-card__text {
+  margin: 0;
+  white-space: pre-line;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #2f2f2f;
+}
+
+.call-card__footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call-card__date {
+  color: #6b6b6b;
+  font-size: 12px;
+}
+
+.call-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 26px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.icon-btn.msg {
+  background: #7b2d83; /* lila */
+  color: #fff;
+}
+
+.icon-btn.connect {
+  background: #8db332; /* grün */
+  color: #fff;
+}
