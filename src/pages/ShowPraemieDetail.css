@@ -2,7 +2,7 @@
   height: 100%;
   overflow-y: auto;
   background: #f5f5f5;
-  padding-bottom: 96px; /* Platz für BottomNav */
+  padding-bottom: 96px; 
 }
 
 .detail-header {
@@ -14,14 +14,16 @@
   color: #8a8a8a;
 }
 
-/* ---------- IMAGE ---------- */
+/* Bild */
 
 .detail-image-wrap {
   position: relative;
   margin: 0 16px;
-  border-radius: 10px;
+  
   overflow: hidden;
+
 }
+
 
 .detail-image {
   width: 100%;
@@ -30,13 +32,13 @@
   display: block;
 }
 
-/* Preis-Badge auf Bild */
+
 .detail-price-badge {
   position: absolute;
-  right: 8px;
-  bottom: 8px;
+  right: 0;
+  bottom: 0;
 
-  background: #7b2d83; /* lila wie im Dummy */
+  background: #86488B; 
   color: #fff;
 
   font-size: 12px;
@@ -45,7 +47,7 @@
   border-radius: 2px;
 }
 
-/* ---------- CONTENT ---------- */
+/*  Content  */
 
 .detail-content {
   padding: 14px 16px;
@@ -76,12 +78,11 @@
   color: #8a8a8a;
 }
 
-/* ---------- CTA ---------- */
+/* CTA  */
 
 .detail-cta {
   margin: 16px;
   background: #fff;
-  border-radius: 10px;
   padding: 14px;
 
   display: flex;
@@ -103,8 +104,6 @@
   background: #8db332;
   color: #fff;
   border: none;
-  border-radius: 6px;
-
   font-size: 26px;
   line-height: 1;
   cursor: pointer;

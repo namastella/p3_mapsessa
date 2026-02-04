@@ -6,8 +6,9 @@
 .tile-row {
   --row-padding: 16px;
   --gap: 14px;
+  /*margin-left: 20px; */
 
-  /* ✅ 2 volle Tiles + „ein bisschen 3.“ (2.35 kannst du feinjustieren) */
+  /*  2 volle Tiles + „ein bisschen 3.“ (2.35 kannst du feinjustieren) */
   --tile-size: calc((100% - (2 * var(--row-padding)) - (2 * var(--gap))) / 2.35);
 
   display: flex;
@@ -15,8 +16,6 @@
 
   overflow-x: auto;
   padding: 4px var(--row-padding) 10px;
-
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -26,7 +25,7 @@
   scroll-snap-align: start;
 }
 
-/* ✅ Fade-Kanten: nicht klick-blockierend */
+/*  Fade-Kanten: nicht klick-blockierend */
 .tile-row-wrap::before,
 .tile-row-wrap::after {
   content: "";
@@ -34,7 +33,7 @@
   top: 0;
   bottom: 0;
   width: 28px;
-  pointer-events: none; /* 🔥 wichtig: blockiert swipe nicht */
+  pointer-events: none; /*  wichtig: blockiert swipe nicht */
   opacity: 0;           /* default: aus, wir schalten per class an */
   transition: opacity 160ms ease;
 }
@@ -51,7 +50,7 @@
   background: linear-gradient(to left, rgba(245,245,245,1), rgba(245,245,245,0));
 }
 
-/* ✅ Zustände:
+/* Zustände:
    - ganz am Anfang: nur rechts anzeigen
    - mittendrin: links + rechts anzeigen
    - ganz am Ende: nur links anzeigen

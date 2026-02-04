@@ -1,8 +1,10 @@
 import "./Score.css";
 import { useNavigate } from "react-router-dom";
+import { useScore } from "../../context/ScoreContext";
 
-export function Score({ score = 120 }) {
+export function Score() {
   const navigate = useNavigate();
+  const { score } = useScore();
 
   return (
     <button

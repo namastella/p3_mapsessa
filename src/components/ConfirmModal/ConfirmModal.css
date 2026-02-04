@@ -1,0 +1,79 @@
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18); 
+  z-index: 3000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px;
+}
+
+.modal-sheet {
+  width: 100%;
+  max-width: 340px;
+  background: #fff;
+  
+  padding: 18px;
+
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.modal-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.modal-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #2b2b2b;
+}
+
+
+.modal-sheet.is-success .modal-body {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end; /* Button rechts */
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* Buttons allgemein */
+.modal-btn {
+  height: 38px;
+  min-width: 96px;
+
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Confirm modal */
+.modal-btn.cancel {
+  background: #0e3296;
+  color: #fff;
+}
+
+.modal-btn.confirm {
+  background: #8db332;
+  color: #fff;
+}
+
+/* Success modal */
+.modal-btn.ok {
+  background: #8db332;
+  color: #fff;
+  min-width: 110px; 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
