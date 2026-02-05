@@ -79,3 +79,14 @@
   background: #8db332;
   color: #fff;
 }
+
+.icon-btn.connect.is-active {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.call-card__status {
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
