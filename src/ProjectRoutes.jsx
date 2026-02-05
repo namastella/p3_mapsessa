@@ -5,6 +5,8 @@ import { ShowPraemien } from "./pages/ShowPraemien";
 import { ShowPraemieDetail } from "./pages/ShowPraemieDetail";
 import { ShowNetzwerk } from "./pages/ShowNetzwerk";
 import { CreateCall } from "./pages/CreateCall";
+import { Chat } from "./pages/Chat";
+
 
 export function ProjectRoutes() {
   return (
@@ -21,6 +23,7 @@ export function ProjectRoutes() {
           <Route path="profil" element={<div>Profil</div>} />
           <Route path="netzwerk" element={<ShowNetzwerk />} />
           <Route path="aufruf/neu" element={<CreateCall />} />
+          <Route path="chat/:id" element={<Chat />} />
           {/* 404 Route */}
           <Route path="*" element={<div style={{ padding: 16 }}>404 – Seite nicht gefunden</div>} />
         </Route>

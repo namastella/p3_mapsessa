@@ -26,7 +26,7 @@ export function ShowNetzwerk() {
           <CallCard
             key={call.id}
             call={call}
-            onMessage={(c) => alert(`Nachricht an ${c.name} (kommt als nächstes)`)}
+            onMessage={(c) => navigate(`/chat/${c.id}`)} 
             onConnect={(c) => alert(`Connect mit ${c.name} (kommt als nächstes)`)}
           />
         ))}

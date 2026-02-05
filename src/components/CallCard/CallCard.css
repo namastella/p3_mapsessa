@@ -65,6 +65,8 @@
 .icon-btn svg {
   width: 18px;
   height: 18px;
+  pointer-events: none;
+
 }
 
 /* Falls deine SVGs mit currentColor arbeiten */
