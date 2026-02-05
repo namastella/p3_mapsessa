@@ -20,7 +20,7 @@
 }
 
 .call-card__handle {
-  color: #6b6b6b;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 600;
 }
@@ -30,7 +30,8 @@
   white-space: pre-line;
   font-size: 13px;
   line-height: 1.45;
-  color: #2f2f2f;
+  color: var(--text);
+
 }
 
 .call-card__footer {
@@ -41,7 +42,7 @@
 }
 
 .call-card__date {
-  color: #6b6b6b;
+  color: var(--muted);
   font-size: 12px;
 }
 
@@ -88,6 +89,6 @@
 
 .call-card__status {
   font-size: 12px;
-  color: #6b6b6b;
+  color: var(--muted);
 }
 

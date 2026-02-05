@@ -27,7 +27,7 @@
 
 .setting-label {
   font-weight: 800;
-  color: #2b2b2b;
+  color: var(--text);
   font-size: 13px;
 }
 

@@ -24,7 +24,8 @@
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  color: #2b2b2b;
+  color: var(--text);
+
 }
 
 .create-card {
@@ -51,7 +52,8 @@
   font-size: 13px;
   font-weight: 700;
   margin: 8px 0;
-  color: #2b2b2b;
+  color: var(--text);
+
 }
 
 .create-textarea {

@@ -36,7 +36,7 @@
 
 .chat-name {
   font-weight: 800;
-  color: #2b2b2b;
+  color: var(--text);
   font-size: 15px;
 }
 
@@ -83,7 +83,7 @@
 .bubble-text {
   font-size: 13px;
   line-height: 1.4;
-  color: #2b2b2b;
+  color: var(--text);
   white-space: pre-line;
 }
 
