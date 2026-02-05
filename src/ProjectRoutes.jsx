@@ -7,6 +7,7 @@ import { ShowNetzwerk } from "./pages/ShowNetzwerk";
 import { CreateCall } from "./pages/CreateCall";
 import { Chat } from "./pages/Chat";
 import { ShowProfile } from "./pages/ShowProfile";
+import { MapHome } from "./pages/MapHome";
 
 
 
@@ -17,7 +18,7 @@ export function ProjectRoutes() {
         {/* Layout-Route bekommt ein path="/" */}
         <Route path="/" element={<AppLayout />}>
           {/* Startseite als index-Route */}
-          <Route index element={<App />} />
+          <Route index element={<MapHome />} />
           {/* Prämien */}
           <Route path="praemien" element={<ShowPraemien />} />
           <Route path="praemien/:id" element={<ShowPraemieDetail />} />

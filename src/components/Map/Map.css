@@ -1,6 +1,10 @@
 .map-screen {
+  position: relative;
   height: 100%;
+  width: 100%;
 }
+
+
 
 
 
@@ -12,4 +16,9 @@
 
 .leaflet-pane {
   z-index: 1;
+}
+
+.map-leaflet {
+  height: 100%;
+  width: 100%;
 }

@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./Menu.css";
 
 export function Menu({ onClose }) {
+    const navigate = useNavigate();
+
   return (
     <div className="menu-overlay" onClick={onClose} role="presentation">
       <div
@@ -9,16 +12,30 @@ export function Menu({ onClose }) {
         role="dialog"
         aria-label="Menü"
       >
+        <div className="menu-handle" />
         <div className="menu-header">
           <span className="menu-title">Menü</span>
-          <button className="menu-close" onClick={onClose} aria-label="Schließen">
+          <button
+            className="menu-close"
+            onClick={onClose}
+            aria-label="Schließen"
+          >
             ✕
           </button>
         </div>
 
         <button className="menu-item">Aufruf starten</button>
-        <button className="menu-item">Barriere melden</button>
+        <button
+          onClick={() => {
+            onClose?.();
+            navigate("/", { state: { report: true } }); // Report-Mode an
+          }}
+        >
+          Barriere melden
+        </button>
       </div>
     </div>
   );
 }
+
+

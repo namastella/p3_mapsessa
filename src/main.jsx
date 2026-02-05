@@ -5,6 +5,7 @@ import "./index.css";
 import { ScoreProvider } from "./context/ScoreContext";
 import { CallsProvider } from "./context/CallsContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 
 
 createRoot(document.getElementById("root")).render(
@@ -12,9 +13,9 @@ createRoot(document.getElementById("root")).render(
     <ThemeProvider>
       <ScoreProvider>
         <CallsProvider>
-        <ProjectRoutes />
-      </CallsProvider>
-    </ScoreProvider>
+          <ProjectRoutes />
+        </CallsProvider>
+      </ScoreProvider>
     </ThemeProvider>
   </StrictMode>,
 );
