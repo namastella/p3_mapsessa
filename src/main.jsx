@@ -4,13 +4,17 @@ import { ProjectRoutes } from "./ProjectRoutes";
 import "./index.css";
 import { ScoreProvider } from "./context/ScoreContext";
 import { CallsProvider } from "./context/CallsContext";
+import { ThemeProvider } from "./context/ThemeContext";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ScoreProvider>
-      <CallsProvider>
+    <ThemeProvider>
+      <ScoreProvider>
+        <CallsProvider>
         <ProjectRoutes />
       </CallsProvider>
     </ScoreProvider>
+    </ThemeProvider>
   </StrictMode>,
 );

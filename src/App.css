@@ -22,11 +22,30 @@ body {
   width: 100%;
   max-width: 430px;
   height: 100vh;
-
-  background: #ffffff;
   position: relative;
   overflow: hidden;
   flex: 0 0 auto;
+
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #2b2b2b;
+  --muted: #7a7a7a;
+
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* Dark Theme nur wenn Klasse drauf ist */
+.app.theme-dark {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.6);
+
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
 }
 
 
