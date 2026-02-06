@@ -1,9 +1,8 @@
 .call-card {
   background: var(--surface);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 16px;
   box-shadow: var(--shadow);
-
 }
 
 .call-card__header {
@@ -14,8 +13,8 @@
 }
 
 .call-card__name {
-  color: #0e3296;
-  font-weight: 800;
+  color: var(--blue);
+  font-weight: 900;
   font-size: 16px;
 }
 
@@ -31,7 +30,6 @@
   font-size: 13px;
   line-height: 1.45;
   color: var(--text);
-
 }
 
 .call-card__footer {
@@ -39,11 +37,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .call-card__date {
   color: var(--muted);
   font-size: 12px;
+}
+
+.call-card__status {
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .call-card__actions {
@@ -52,43 +56,52 @@
 }
 
 .icon-btn {
-  width: 44px;
-  height: 26px;
-  border: none;
-  cursor: pointer;
-  border-radius: 2px;
+  height: 36px;
+  min-width: 44px;
+  padding: 0 10px;
 
-  display: flex;
+  border: none;
+  border-radius: 0;
+
+  cursor: pointer;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: 700;
 }
 
-/* SVG Größe */
 .icon-btn svg {
   width: 18px;
   height: 18px;
   pointer-events: none;
-
 }
 
-/* Falls deine SVGs mit currentColor arbeiten */
 .icon-btn.msg {
-  background: #7b2d83;
+  background: var(--purple);
   color: #fff;
 }
 
 .icon-btn.connect {
-  background: #8db332;
+  background: var(--green);
   color: #fff;
 }
 
 .icon-btn.connect.is-active {
-  opacity: 0.5;
+  opacity: 0.55;
   cursor: default;
 }
 
-.call-card__status {
-  font-size: 12px;
-  color: var(--muted);
+.icon-btn:active {
+  filter: brightness(1.05);
 }
 
+.icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.icon-btn.connect.is-active:active {
+  filter: none;
+}
