@@ -1,4 +1,4 @@
-// import "./ShowPraemien.css"; --> CSS Datei kann später hinzugefügt werden
+import "./ShowPraemien.css"; 
 import { useNavigate } from "react-router-dom";
 import { REWARDS } from "../data/rewards";
 import { RewardTile } from "../components/RewardTile/RewardTile";
@@ -9,6 +9,14 @@ export function ShowPraemien() {
 
   return (
     <div className="page">
+        <button
+        type="button"
+        className="page-back"
+        onClick={() => navigate(-1)}
+        aria-label="Zurück"
+      >
+        ←
+      </button>
       <h1 className="page__title">Prämien eintauschen</h1>
 
       <h2 className="section__title">Kategorien</h2>

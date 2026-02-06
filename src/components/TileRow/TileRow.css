@@ -6,17 +6,19 @@
 .tile-row {
   --row-padding: 16px;
   --gap: 14px;
-  /*margin-left: 20px; */
 
-  /*  2 volle Tiles + „ein bisschen 3.“ (2.35 kannst du feinjustieren) */
+
+  /*  2 volle Tiles + „ein bisschen 3.“  */
   --tile-size: calc((100% - (2 * var(--row-padding)) - (2 * var(--gap))) / 2.35);
 
   display: flex;
   gap: var(--gap);
 
   overflow-x: auto;
-  padding: 4px var(--row-padding) 10px;
+  padding: 6px var(--row-padding) 12px;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.12) transparent;
 }
 
 .tile-row > * {
@@ -33,21 +35,21 @@
   top: 0;
   bottom: 0;
   width: 28px;
-  pointer-events: none; /*  wichtig: blockiert swipe nicht */
-  opacity: 0;           /* default: aus, wir schalten per class an */
+  pointer-events: none; 
+  opacity: 0;           
   transition: opacity 160ms ease;
 }
 
 /* Linke Abmattierung */
 .tile-row-wrap::before {
   left: 0;
-  background: linear-gradient(to right, rgba(245,245,245,1), rgba(245,245,245,0));
+  background: linear-gradient(to right, var(--bg), rgba(0, 0, 0, 0));
 }
 
 /* Rechte Abmattierung */
 .tile-row-wrap::after {
   right: 0;
-  background: linear-gradient(to left, rgba(245,245,245,1), rgba(245,245,245,0));
+  background: linear-gradient(to left, var(--bg), rgba(0, 0, 0, 0));
 }
 
 /* Zustände:
@@ -66,4 +68,18 @@
 
 .tile-row-wrap.is-at-end::before {
   opacity: 1;
+}
+
+.tile-row::-webkit-scrollbar {
+  height: 1px; /* sehr dünn */
+  scrollbar-width: none;
+}
+
+.tile-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tile-row::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
 }

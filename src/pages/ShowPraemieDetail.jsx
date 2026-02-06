@@ -37,7 +37,7 @@ export function ShowPraemieDetail() {
         >
           ←
         </button>
-        <span className="detail-eyebrow">Prämien Detailansicht</span>
+        <span className="detail-eyebrow">{reward.shortTitle ?? "Prämie"}</span>
       </header>
 
       <div className="detail-image-wrap">

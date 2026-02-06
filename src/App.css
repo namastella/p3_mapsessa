@@ -68,3 +68,32 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   }
 }
+
+.page-back {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  background: transparent;
+  border-radius: 0;
+
+  font: inherit;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.page-back:active {
+  filter: brightness(1.08);
+}
+
+.page-back:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}

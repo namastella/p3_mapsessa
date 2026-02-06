@@ -13,6 +13,14 @@ export function ShowProfile() {
   return (
     <div className="profil-page">
       <header className="profil-top">
+        <button
+        type="button"
+        className="page-back"
+        onClick={() => navigate(-1)}
+        aria-label="Zurück"
+      >
+        ←
+      </button>
         <h1 className="profil-title">Profil</h1>
       </header>
 
