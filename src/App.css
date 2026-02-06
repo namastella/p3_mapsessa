@@ -1,21 +1,15 @@
 #root {
   min-height: 100%;
-  background: #e5e5e5;
+  background: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px; 
+  padding: 24px;
   box-sizing: border-box;
 }
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f2f2f2;
 }
 
 .app {
@@ -26,17 +20,25 @@ body {
   overflow: hidden;
   flex: 0 0 auto;
 
-  --bg: #ffffff;
+  --bg: #f7f7f7;
   --surface: #ffffff;
-  --text: #2b2b2b;
-  --muted: #7a7a7a;
 
-  --shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  --text: #000000;
+  --muted: #333333;
+
+  /* “schwebende Boxen” */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Akzente */
+  --blue: #0e3296;
+  --green: #8db332;
+  --orange: #e9832d;
+  --purple: #86488b;
+  --radius: 0px;
 
   background: var(--bg);
   color: var(--text);
 }
-
 
 /* Dark Theme nur wenn Klasse drauf ist */
 .app.theme-dark {
@@ -48,22 +50,19 @@ body {
   --shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
 }
 
-
 .screen {
   height: 100%;
-  padding-bottom: 64px; 
+  padding-bottom: 64px;
 }
-
 
 @media (min-width: 900px) {
   .app {
     width: min(390px, calc(100vw - 48px));
-    aspect-ratio: 390 / 844;   
-    max-height: 844px;           
+    aspect-ratio: 390 / 844;
+    max-height: 844px;
 
     max-width: none;
-    border-radius: 28px;
+    border-radius: 15px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   }
 }
-
