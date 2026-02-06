@@ -12,7 +12,7 @@ export function Menu({ onClose }) {
         role="dialog"
         aria-label="Menü"
       >
-        <div className="menu-handle" />
+        
         <div className="menu-header">
           <span className="menu-title">Menü</span>
           <button

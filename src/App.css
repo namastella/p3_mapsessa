@@ -38,6 +38,8 @@
 
   background: var(--bg);
   color: var(--text);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 /* Dark Theme nur wenn Klasse drauf ist */

@@ -6,7 +6,6 @@ import {
   TileLayer,
   Marker,
   Popup,
-  Polyline,
   useMapEvents,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -58,6 +57,8 @@ function ReportClick({ enabled, onAdd }) {
   return null;
 }
 
+
+
 export function MapHome() {
   const location = useLocation();
 
@@ -66,7 +67,7 @@ export function MapHome() {
   const [userBarriers, setUserBarriers] = useState([]);
   const [route, setRoute] = useState(null); // { from: [..], to: [..] }
 
-  // ✅ HIER: Menü-Trigger auslesen und Mode setzen
+  // HIER: Menü-Trigger auslesen und Mode setzen
   useEffect(() => {
     if (location.state?.report) setMode("report");
     if (location.state?.report === false) setMode("browse");
@@ -95,6 +96,9 @@ export function MapHome() {
 
   return (
     <div className="map-screen">
+
+        
+
       <MapContainer center={center} zoom={16} className="map-leaflet">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

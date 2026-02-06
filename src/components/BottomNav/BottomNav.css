@@ -1,3 +1,5 @@
+
+
 .bottom-nav {
   position: absolute;
   bottom: 0;
@@ -10,56 +12,55 @@
   justify-content: space-around;
   align-items: center;
 
-  background: #0E3296;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 1000; 
-
-  /*padding-bottom: env(safe-area-inset-bottom);  ---> später mal checken, Vorschlag kam von Chatgpt*/
-}
-
-.menu-button {
-  background: none;
-  border: none;
-  padding: 8px;
-  color: white; /* 👈 extrem wichtig */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-button svg {
-  width: 24px;
-  height: 24px;
+  background: var(--blue);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 
-
+.menu-button,
 .nav-item {
   background: none;
   border: none;
-  padding: 8px;
 
-  /* wichtig für SVG-Farbe via currentColor */
-  color: rgba(255, 255, 255, 0.65);
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  text-decoration: none; /* weil NavLink ein <a> ist */
+  padding: 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+
+  cursor: pointer;
 }
 
+.menu-button {
+  color: #ffffff;
+}
+
+
+.menu-button svg,
 .nav-item svg {
   width: 24px;
   height: 24px;
 }
 
-/* ACTIVE */
 .nav-item.is-active {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Optional: kleines Touch-Feedback */
+.menu-button:active,
 .nav-item:active {
-  transform: scale(0.96);
+  filter: brightness(1.08);
+}
+
+/* Keyboard Focus */
+.menu-button:focus-visible,
+.nav-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
