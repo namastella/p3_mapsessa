@@ -16,6 +16,15 @@ export function ShowNetzwerk() {
   return (
     <div className="netzwerk-page">
       <header className="netzwerk-top">
+        <button
+  type="button"
+  className="back-btn"
+  onClick={() => window.history.back()}
+  aria-label="Zurück"
+>
+  ←
+</button>
+
         <div className="netzwerk-top__title">Aufrufe</div>
 
         <button

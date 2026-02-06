@@ -2,17 +2,47 @@
   height: 100%;
   overflow-y: auto;
   background: var(--bg);
-  padding-bottom: 96px; /* Platz für BottomNav */
+  padding-bottom: 0;
 }
 
-/* Header oben */
+.back-btn {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+
+  color: var(--text);
+  font: inherit;
+  font-size: 20px;
+  font-weight: 900;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.back-btn:active {
+  filter: brightness(1.08);
+}
+.back-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
 .netzwerk-top {
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 16px;
+  padding-right: 110px;
+  padding-top: 22px;
 
-  padding: 14px 16px;
-  background: #f5f5f5;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
   display: flex;
   align-items: center;
@@ -22,36 +52,49 @@
 
 .netzwerk-top__title {
   font-size: 22px;
-  color: var(--muted);
-  font-weight: 500;
+  font-weight: 900;
+  color: var(--text);
 }
 
-/* "Aufruf starten" Button oben */
 .start-call-btn {
-  height: 34px;
-  padding: 0 10px;
+  height: 36px;
+  padding: 0 12px;
+
+  border-radius: 0;
   border: none;
-  border-radius: 6px;
-  background: #0e3296;
-  color: #fff;
+
+  background: var(--blue);
+  color: #ffffff;
+
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 }
 
+.start-call-btn:active {
+  filter: brightness(1.05);
+}
+
+.start-call-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
 .feed {
-  padding: 10px 16px 18px;
+  padding: 16px;
   display: grid;
-  gap: 16px;
+  gap: 30px;
 }
 
 .call-card {
-  background: #fff;
-  border-radius: 10px;
+  background: var(--surface);
+  border-radius: 0;
   padding: 16px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+  box-shadow: var(--shadow);
 }
 
+/* Header */
 .call-card__header {
   display: flex;
   align-items: baseline;
@@ -60,34 +103,38 @@
 }
 
 .call-card__name {
-  color: #0e3296;
-  font-weight: 800;
+  color: var(--blue);
+  font-weight: 900;
   font-size: 16px;
 }
 
 .call-card__handle {
-  color: #6b6b6b;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 600;
 }
 
+/* Text */
 .call-card__text {
   margin: 0;
   white-space: pre-line;
+
   font-size: 13px;
   line-height: 1.45;
-  color: #2f2f2f;
+  color: var(--text);
 }
 
+/* Footer */
 .call-card__footer {
   margin-top: 12px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .call-card__date {
-  color: #6b6b6b;
+  color: var(--muted);
   font-size: 12px;
 }
 
@@ -96,21 +143,39 @@
   gap: 8px;
 }
 
+/* Icon Buttons */
 .icon-btn {
-  width: 44px;
-  height: 26px;
+  height: 36px;
+  min-width: 44px;
+
+  padding: 0 10px;
+
   border: none;
+  border-radius: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+
   cursor: pointer;
-  border-radius: 2px;
-  font-size: 14px;
 }
 
+/* Nachricht */
 .icon-btn.msg {
-  background: #7b2d83; /* lila */
-  color: #fff;
+  background: var(--purple);
+  color: #ffffff;
 }
 
+/* Verbinden */
 .icon-btn.connect {
-  background: #8db332; /* grün */
-  color: #fff;
+  background: var(--green);
+  color: #ffffff;
+}
+
+.icon-btn:active {
+  filter: brightness(1.05);
+}
+
+.icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
 }
