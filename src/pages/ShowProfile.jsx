@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import "./ShowProfile.css";
+import "./ShowProfile.css";
 import { useTheme } from "../context/ThemeContext";
 import { SettingRow } from "../components/Settings/SettingRow";
 import { Toggle } from "../components/Settings/Toggle";

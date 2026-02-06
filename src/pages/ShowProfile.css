@@ -1,0 +1,92 @@
+.profil-page {
+  height: 100%;
+  overflow-y: auto;
+  background: var(--bg);
+  padding: 16px;
+}
+
+/* Topbar */
+.profil-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  padding: 16px;
+
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  /* Platz für Score oben rechts */
+  padding-right: 110px;
+
+  margin: -16px -16px 16px;
+}
+
+.profil-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+/* Profil-Card */
+.profil-card {
+  background: var(--surface);
+  border-radius: 0;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+/* Avatar (dummy) */
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 0;
+
+  background: var(--c-gray-200);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Meta */
+.profil-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.profil-name {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.profil-handle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Settings Section */
+.settings {
+  display: grid;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-transform: uppercase;
+
+  margin: 4px 0 4px;
+}
