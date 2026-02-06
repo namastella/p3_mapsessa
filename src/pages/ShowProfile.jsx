@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ShowProfile.css";
 import { useTheme } from "../context/ThemeContext";
 import { SettingRow } from "../components/Settings/SettingRow";
 import { Toggle } from "../components/Settings/Toggle";
 
 export function ShowProfile() {
+  const navigate = useNavigate();
+
   const [sound, setSound] = useState(true);
-  const [lightMode, setLightMode] = useState(false);
   const [rightHanded, setRightHanded] = useState(true);
   const { isDark, toggleTheme } = useTheme();
 
@@ -14,13 +16,14 @@ export function ShowProfile() {
     <div className="profil-page">
       <header className="profil-top">
         <button
-        type="button"
-        className="page-back"
-        onClick={() => navigate(-1)}
-        aria-label="Zurück"
-      >
-        ←
-      </button>
+          type="button"
+          className="page-back"
+          onClick={() => navigate(-1)}
+          aria-label="Zurück"
+        >
+          ←
+        </button>
+
         <h1 className="profil-title">Profil</h1>
       </header>
 
