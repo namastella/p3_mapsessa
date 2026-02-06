@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCalls } from "../context/CallsContext";
-// import "./CreateCall.css";
+import "./CreateCall.css";
 
 function formatDateDE(d = new Date()) {
   const dd = String(d.getDate()).padStart(2, "0");
@@ -46,9 +46,9 @@ export function CreateCall() {
       <div className="create-card">
         <div className="create-meta">
           <div className="create-user">
-            <b>{name}</b> <span className="muted">{handle}</span>
+            <b>{name}</b> <span className="create-muted">{handle}</span>
           </div>
-          <div className="muted">{today}</div>
+          <div className="create-muted">{today}</div>
         </div>
 
         <label className="create-label" htmlFor="call-text">
@@ -83,7 +83,7 @@ export function CreateCall() {
           </button>
         </div>
 
-        <p className="create-hint muted">
+        <p className="create-hint create-muted">
           Dein Aufruf erscheint danach im Netzwerk-Feed.
         </p>
       </div>
