@@ -6,19 +6,32 @@ import { createControlComponent } from "@react-leaflet/core";
 const createRoutingControl = ({ waypoints }) => {
   const instance = L.Routing.control({
     waypoints: waypoints.map((p) => L.latLng(p[0], p[1])),
+
+    /* 🔑 HIER: Fußverkehr statt Auto */
+    router: L.Routing.osrmv1({
+      serviceUrl: "https://router.project-osrm.org/route/v1",
+      profile: "foot",
+    }),
+
     addWaypoints: false,
     draggableWaypoints: false,
     fitSelectedRoutes: true,
     routeWhileDragging: false,
 
-    // ✅ keine LRM-Panel-UI anzeigen
+    /* keine LRM-UI */
     show: false,
     collapsible: false,
     showAlternatives: false,
 
-    // Optional: line styling (LRM selbst zeichnet Polyline)
+    /* Linien-Styling */
     lineOptions: {
-      styles: [{ weight: 5, opacity: 0.9 }],
+      styles: [
+        {
+          weight: 5,
+          opacity: 0.9,
+          color: "#0E3296", 
+        },
+      ],
     },
   });
 

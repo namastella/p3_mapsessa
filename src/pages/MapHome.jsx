@@ -105,7 +105,7 @@ export function MapHome() {
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* ✅ Nur aktiv, wenn report-mode */}
+        {/*  Nur aktiv, wenn report-mode */}
         <ReportClick
           enabled={mode === "report"}
           onAdd={(pos) => {
@@ -122,11 +122,11 @@ export function MapHome() {
                 <p style={{ margin: "8px 0", fontSize: 13 }}>{b.description}</p>
 
                 <button
-                  type="button"
-                  onClick={() => setRoute({ from: center, to: b.position })}
-                  style={{ width: "100%" }}
-                >
-                  Route dahin (Demo)
+  type="button"
+  className="btn btn--primary btn--block"
+  onClick={() => setRoute({ from: center, to: b.position })}
+>
+                  Route starten 
                 </button>
               </div>
             </Popup>
@@ -179,32 +179,35 @@ export function MapHome() {
 
           <div className="report-actions">
             <button
-              type="button"
-              onClick={() => {
-                setDraftPos(null);
-                setMode("browse");
-              }}
-            >
-              Abbrechen
-            </button>
+  type="button"
+  className="btn btn--secondary"
+  onClick={() => {
+    setDraftPos(null);
+    setMode("browse");
+  }}
+>
+  Abbrechen
+</button>
 
-            <button
-              type="button"
-              onClick={() => {
-                addBarrier({
-                  title: draftTitle || "Gemeldete Barriere",
-                  type: draftType,
-                  position: draftPos,
-                  description: "",
-                });
-                setDraftPos(null);
-                setDraftTitle("");
-                setDraftType("bordstein");
-                setMode("browse");
-              }}
-            >
-              Speichern
-            </button>
+<button
+  type="button"
+  className="btn btn--primary"
+  onClick={() => {
+    addBarrier({
+      title: draftTitle || "Gemeldete Barriere",
+      type: draftType,
+      position: draftPos,
+      description: "",
+    });
+    setDraftPos(null);
+    setDraftTitle("");
+    setDraftType("Bordstein"); 
+    setMode("browse");
+  }}
+>
+  Speichern
+</button>
+
           </div>
         </div>
       )}

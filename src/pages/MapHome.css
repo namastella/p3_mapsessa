@@ -1,21 +1,14 @@
-/* MAP BASE */
-
 .map-screen {
   height: 100%;
   position: relative;
 }
 
-/* Leaflet braucht echte Höhe */
 .map-leaflet {
   height: 100%;
   width: 100%;
   position: relative;
   z-index: 0;
 }
-
-/* =========================================================
-   OVERLAYS – pointer-events sauber geregelt
-========================================================= */
 
 /* Overlays blockieren NICHT die Karte */
 .map-actions,
@@ -30,10 +23,6 @@
 .report-banner button {
   pointer-events: auto;
 }
-
-/* =========================================================
-   MAP ACTIONS (Top Buttons)
-========================================================= */
 
 .map-actions {
   position: absolute;
@@ -61,13 +50,11 @@
 }
 
 .map-actions .is-active {
-  box-shadow: var(--shadow), 0 0 0 2px rgba(14, 50, 150, 0.25);
+  box-shadow:
+    var(--shadow),
+    0 0 0 2px rgba(14, 50, 150, 0.25);
   color: var(--blue);
 }
-
-/* =========================================================
-   ROUTE SHEET
-========================================================= */
 
 .route-sheet {
   position: absolute;
@@ -95,10 +82,6 @@
   margin: 0;
   padding-left: 18px;
 }
-
-/* =========================================================
-   REPORT BANNER (Hinweis unten)
-========================================================= */
 
 .report-banner {
   position: absolute;
@@ -128,15 +111,13 @@
   line-height: 1.3;
 }
 
-/* =========================================================
-   REPORT SHEET (FORM) – DAS WAR DER FEHLENDE TEIL 💥
-========================================================= */
+/* form styles */
 
 .report-sheet {
   position: absolute;
   left: 16px;
   right: 16px;
-  bottom: 84px; /* über BottomNav */
+  bottom: 84px; 
   z-index: 1200;
 
   background: var(--surface);
@@ -148,12 +129,8 @@
 
   animation: sheetUp 220ms var(--ease-out);
 
-  pointer-events: auto; /* WICHTIG */
+  pointer-events: auto;
 }
-
-/* =========================================================
-   FORM ELEMENTS
-========================================================= */
 
 .report-sheet h3 {
   margin: 0 0 12px;
@@ -181,10 +158,6 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: #ffffff;
 }
-
-/* =========================================================
-   ACTIONS
-========================================================= */
 
 .report-actions {
   display: flex;
@@ -216,8 +189,99 @@
   box-shadow: var(--focus);
 }
 
+.leaflet-popup-content-wrapper {
+  background: var(--surface);
+  color: var(--text);
 
+  border-radius: 0;
+  box-shadow: var(--shadow);
 
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+
+  box-sizing: border-box;
+}
+
+.leaflet-popup-close-button {
+  top: 8px;
+  right: 8px;
+
+  width: 32px;
+  height: 32px;
+
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.leaflet-popup-close-button:hover {
+  color: var(--text);
+}
+
+.leaflet-popup-tip {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.leaflet-popup-content .btn {
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+
+  height: 44px;
+  padding: 0 12px;
+
+  font: inherit;
+  font-weight: 700;
+
+  background: var(--surface);
+  color: var(--text);
+
+  cursor: pointer;
+}
+
+.btn:active {
+  filter: brightness(1.05);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.btn--primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.btn--secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.report-actions .btn {
+  flex: 1;
+}
 
 @keyframes sheetUp {
   from {
