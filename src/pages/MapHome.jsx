@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { RoutingControl } from "../components/Routing/RoutingControl";
 import {
   MapContainer,
   TileLayer,
@@ -128,7 +129,7 @@ export function MapHome() {
           </Marker>
         ))}
 
-        {route ? <Polyline positions={[route.from, route.to]} /> : null}
+        {route ? <RoutingControl waypoints={[route.from, route.to]} /> : null}
       </MapContainer>
 
       {mode === "report" && (
@@ -178,7 +179,6 @@ export function MapHome() {
               onClick={() => {
                 setDraftPos(null);
                 setMode("browse");
-                _toggleCleanup();
               }}
             >
               Abbrechen

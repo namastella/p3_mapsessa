@@ -24,8 +24,12 @@ export function Menu({ onClose }) {
           </button>
         </div>
 
-        <button className="menu-item">Aufruf starten</button>
-        <button
+        <button className="menu-item"  
+          onClick={() => {
+            navigate("/aufruf/neu");
+            onClose();
+          }}>Aufruf starten</button>
+        <button className="menu-item"
           onClick={() => {
             onClose?.();
             navigate("/", { state: { report: true } }); // Report-Mode an
