@@ -4,6 +4,7 @@ import "./ShowProfile.css";
 import { useTheme } from "../context/ThemeContext";
 import { SettingRow } from "../components/Settings/SettingRow";
 import { Toggle } from "../components/Settings/Toggle";
+import Profil from "../assets/pictures/profilbild2.svg";
 
 export function ShowProfile() {
   const navigate = useNavigate();
@@ -28,12 +29,26 @@ export function ShowProfile() {
       </header>
 
       <section className="profil-card">
-        <div className="avatar" aria-hidden="true" />
-        <div className="profil-meta">
-          <div className="profil-name">Stella</div>
-          <div className="profil-handle">@stellaumlauf</div>
-        </div>
-      </section>
+  <div className="profil-header">
+    <img
+      className="profil-avatar"
+      src={Profil}
+      alt="Profilbild von Stella"
+    />
+
+    <div className="profil-meta">
+      <div className="profil-name">Stella</div>
+      <div className="profil-handle">@stellaimdhda</div>
+    </div>
+  </div>
+
+  <p className="profil-bio">
+    UX Design Studentin in Darmstadt. Interessiert an inklusiven Services
+    und gemeinschaftlicher Mobilität.
+  </p>
+</section>
+
+
 
       <section className="settings">
         <div className="section-title">Einstellungen</div>

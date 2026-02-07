@@ -1,3 +1,6 @@
+
+
+
 .profil-page {
   height: 100%;
   overflow-y: auto;
@@ -47,15 +50,48 @@
   margin-bottom: 16px;
 }
 
-/* Avatar (dummy) */
-.avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 0;
-
-  background: var(--c-gray-200);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+/* Card muss als Spalte laufen */
+.profil-card {
+  display: flex;
+  flex-direction: column;   /* <<< wichtig */
+  align-items: flex-start;  /* <<< wichtig */
+  gap: 10px;
 }
+
+/* Nur der obere Bereich ist eine Row (Bild + Name) */
+.profil-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Bio wirklich unterhalb, volle Breite */
+.profil-bio {
+  margin: 0;                /* wir nutzen gap */
+  width: 100%;
+  max-width: 52ch;
+
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+
+.profil-avatar {
+  width: 88px;
+  height: 88px;
+
+  object-fit: cover;
+  display: block;
+
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--surface);
+
+  flex-shrink: 0;
+}
+
 
 /* Meta */
 .profil-meta {
@@ -77,6 +113,9 @@
   font-weight: 600;
   color: var(--muted);
 }
+
+
+
 
 /* Settings Section */
 .settings {
