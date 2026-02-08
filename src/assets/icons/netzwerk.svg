@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 817.69 785.42">
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 992.17 785.42">
   <defs>
     <style>
       .cls-1 {
@@ -12,11 +12,11 @@
     </style>
   </defs>
   <g id="Profil">
-    <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-2" cx="306.45" cy="324.65" r="168.22"/>
-    <path id="Rechteck_12" data-name="Rechteck 12" class="cls-2" d="M284.51,507.49h43.88c153.49,0,277.92,124.43,277.92,277.92H6.59c0-153.49,124.43-277.92,277.92-277.92Z"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-2" cx="369.81" cy="214.3" r="207.45"/>
+    <path id="Rechteck_12" data-name="Rechteck 12" class="cls-2" d="M342.75,439.79h54.12c189.3,0,342.75,153.45,342.75,342.75H0c0-189.3,153.45-342.75,342.75-342.75Z"/>
   </g>
   <g id="Profil-2">
-    <circle id="Ellipse_4-2" data-name="Ellipse 4-2" class="cls-1" cx="511.24" cy="324.65" r="168.22"/>
-    <path id="Rechteck_12-2" data-name="Rechteck 12-2" class="cls-1" d="M489.3,507.49h43.88c153.49,0,277.92,124.43,277.92,277.92H211.38c0-153.49,124.43-277.92,277.92-277.92Z"/>
+    <circle id="Ellipse_4-2" data-name="Ellipse 4-2" class="cls-1" cx="622.36" cy="214.3" r="207.45"/>
+    <path id="Rechteck_12-2" data-name="Rechteck 12-2" class="cls-1" d="M595.3,439.79h54.12c189.3,0,342.75,153.45,342.75,342.75H252.55c0-189.3,153.45-342.75,342.75-342.75Z"/>
   </g>
 </svg>
