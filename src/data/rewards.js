@@ -17,7 +17,7 @@ export const REWARDS = [
     details:
       "Such dir noch schnell einen Film raus und ab geht's!",
     footnote: "*Nur gültig in allen Kinopolis Einrichtungen Darmstadt.",
-    category: "Gutscheine",
+    categories: ["Gutscheine", "Freizeit"],
   },
   {
     id: "heinerliner",
@@ -28,7 +28,7 @@ export const REWARDS = [
     description: "Eine Freifahrt mit dem Heinerliner in Darmstadt.",
     details: "Gültig im Stadtgebiet Darmstadt.",
     footnote: "",
-    category: "Mobilität",
+    categories: ["Mobilität", "Gutscheine"],
   },
   {
     id: "theater",
@@ -39,7 +39,7 @@ export const REWARDS = [
     description: "Was ist das denn für ein Theater hier? Und wann warst du eigentlich das letzte Mal im Theater? Dann wird es mal wieder Zeit. Mit diesem Gutschein erhälst du freien Eintritt für ein Stück deiner Wahl.",
     details: "Gültig nur im Staatstheater Darmstadt.",
     footnote: "",
-    category: "Gutscheine",
+    categories: ["Gutscheine", "Freizeit"],
   },
   {
     id: "cbf",
@@ -50,7 +50,7 @@ export const REWARDS = [
     description: "Pro 100 Punkten werden 10€ an den Club Behinderter und ihrer Freunde in Darmstadt und Umgebung e.V. gespendet. Der CBF setzt sich seit 1971 für die Belange von Menschen mit Behinderung ein.",
     details: "Weitere Informationen zur Nutzung der Spendengelder findest du auf der Website des CBF.",
     footnote: "",
-    category: "Spende",
+    categories: ["Spende"],
   },
   {
     id: "museum",
@@ -61,7 +61,7 @@ export const REWARDS = [
     description: "Erhalte freien Eintritt im Hessischen Landesmuseum für eine Person. ",
     details: "Es handelt sich um einen einmaligen Eintritt. Sonntage sind von der Aktion ausgeschlossen.",
     footnote: "",
-    category: "Freizeit",
+    categories: ["Gutscheine", "Freizeit"],
   },
   {
     id: "sehenswert",
@@ -72,7 +72,7 @@ export const REWARDS = [
     description: "Erhalte freien Eintritt in den berühmten Hochzeitsturm der Mathildenhöhe. Genieße einen unfassbaren Ausblick über die Stadt Darmstadt. ",
     details: "Es handelt sich um einen einmaligen Eintritt. Sonntage sind von der Aktion ausgeschlossen.",
     footnote: "",
-    category: "Freizeit",
+    categories: ["Gutscheine", "Freizeit"],
   },
 ];
 
