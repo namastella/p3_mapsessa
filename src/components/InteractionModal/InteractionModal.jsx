@@ -44,7 +44,7 @@ export function InteractionModal({
         </div>
 
         {i?.status === "completed" ? (
-          <div className="icm-done">✅ Abgeschlossen – Punkte können gutgeschrieben werden.</div>
+          <div className="icm-done">✔️ Abgeschlossen – Dir werden in Kürze 100 Punkte auf deinem Konto gutgeschrieben.</div>
         ) : null}
 
         <button type="button" className="icm-close" onClick={onClose}>

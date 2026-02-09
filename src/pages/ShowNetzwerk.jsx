@@ -13,14 +13,13 @@ export function ShowNetzwerk() {
   const [selectedCall, setSelectedCall] = useState(null);
   const [modalStep, setModalStep] = useState("connect"); // "connect" | "confirm"
   const [connectedIds, setConnectedIds] = useState([]); // Bereitschaft gesendet
-const [completedIds, setCompletedIds] = useState([]); // Interaktion abgeschlossen
+  const [completedIds, setCompletedIds] = useState([]); // Interaktion abgeschlossen
 
   const [confirmedMe, setConfirmedMe] = useState(false);
   const [confirmedOther, setConfirmedOther] = useState(false);
 
   const isConnected = (id) => connectedIds.includes(id);
-const isCompleted = (id) => completedIds.includes(id);
-
+  const isCompleted = (id) => completedIds.includes(id);
 
   const closeModal = () => {
     setSelectedCall(null);
@@ -55,25 +54,24 @@ const isCompleted = (id) => completedIds.includes(id);
       <div className="feed">
         {calls.map((call) => (
           <CallCard
-  key={call.id}
-  call={call}
-  connected={isConnected(call.id)}
-  completed={isCompleted(call.id)}
-  onMessage={(c) => navigate(`/chat/${c.id}`)}
-  onConnect={(c) => {
-    setSelectedCall(c);
-    setModalStep("connect");
-    setConfirmedMe(false);
-    setConfirmedOther(false);
-  }}
-  onFinish={(c) => {
-    setSelectedCall(c);
-    setModalStep("confirm");
-    setConfirmedMe(false);
-    setConfirmedOther(false);
-  }}
-/>
-
+            key={call.id}
+            call={call}
+            connected={isConnected(call.id)}
+            completed={isCompleted(call.id)}
+            onMessage={(c) => navigate(`/chat/${c.id}`)}
+            onConnect={(c) => {
+              setSelectedCall(c);
+              setModalStep("connect");
+              setConfirmedMe(false);
+              setConfirmedOther(false);
+            }}
+            onFinish={(c) => {
+              setSelectedCall(c);
+              setModalStep("confirm");
+              setConfirmedMe(false);
+              setConfirmedOther(false);
+            }}
+          />
         ))}
       </div>
 
@@ -85,32 +83,36 @@ const isCompleted = (id) => completedIds.includes(id);
               ? "Bereitschaft signalisieren"
               : "Interaktion abschließen"
           }
-          confirmText={modalStep === "connect" ? "Bereitschaft senden" : "Fertig"}
+          confirmText={
+            modalStep === "connect" ? "Bereitschaft senden" : "Fertig"
+          }
           cancelText="Schließen"
           onClose={closeModal}
           onConfirm={() => {
-  if (modalStep === "connect") {
-    // ✅ Bereitschaft senden → Status setzen → Modal zu
-    setConnectedIds((prev) =>
-      prev.includes(selectedCall.id) ? prev : [selectedCall.id, ...prev]
-    );
-    closeModal();
-  } else {
-    // ✅ Interaktion abschließen → nur wenn beide bestätigt
-    if (confirmedMe && confirmedOther) {
-      setCompletedIds((prev) =>
-        prev.includes(selectedCall.id) ? prev : [selectedCall.id, ...prev]
-      );
-      closeModal();
-    }
-  }
-}}
-
+            if (modalStep === "connect") {
+              setConnectedIds((prev) =>
+                prev.includes(selectedCall.id)
+                  ? prev
+                  : [selectedCall.id, ...prev],
+              );
+              closeModal();
+            } else {
+              if (confirmedMe && confirmedOther) {
+                setCompletedIds((prev) =>
+                  prev.includes(selectedCall.id)
+                    ? prev
+                    : [selectedCall.id, ...prev],
+                );
+                closeModal();
+              }
+            }
+          }}
         >
           {modalStep === "connect" ? (
             <>
               <p>
-                Du signalisierst, dass du bereit bist, bei diesem Aufruf zu helfen.
+                Du signalisierst, dass du bereit bist, bei diesem Aufruf zu
+                helfen.
               </p>
               <p>Die Person kann dich anschließend kontaktieren.</p>
             </>
@@ -132,13 +134,16 @@ const isCompleted = (id) => completedIds.includes(id);
                   onClick={() => setConfirmedOther(true)}
                   disabled={confirmedOther}
                 >
-                  {confirmedOther ? "Andere Person ✓" : "Andere Person (simulieren)"}
+                  {confirmedOther
+                    ? "Andere Person ✓"
+                    : "Andere Person (simulieren)"}
                 </button>
               </div>
 
               {confirmedMe && confirmedOther ? (
                 <p style={{ marginTop: 12, fontWeight: 700 }}>
-                  ✅ Abgeschlossen – Punkte können gutgeschrieben werden.
+                  ✔️ Interaktion abgeschlossen – Dir werden in Kürze 100 Punkte
+                  auf deinem Konto gutgeschrieben.
                 </p>
               ) : (
                 <p style={{ marginTop: 12, opacity: 0.7 }}>

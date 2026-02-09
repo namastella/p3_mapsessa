@@ -7,9 +7,9 @@ export function CallCard({
   call,
   onMessage,
   onConnect,
-  onFinish,              // ✅ neu
+  onFinish,
   connected = false,
-  completed = false,     // ✅ neu
+  completed = false,
 }) {
   return (
     <article className="call-card">
@@ -41,12 +41,18 @@ export function CallCard({
             aria-label="Verbinden"
             onClick={() => onConnect?.(call)}
             disabled={connected || completed}
-            title={completed ? "Bereits abgeschlossen" : connected ? "Bereitschaft gesendet" : "Verbinden"}
+            title={
+              completed
+                ? "Bereits abgeschlossen"
+                : connected
+                  ? "Bereitschaft gesendet"
+                  : "Verbinden"
+            }
           >
             <ConnectIcon />
           </button>
 
-          {/* ✅ neu: nur zeigen, wenn connected aber noch nicht completed */}
+          {/* nur zeigen, wenn connected aber noch nicht completed */}
           {connected && !completed ? (
             <button
               type="button"
@@ -58,9 +64,11 @@ export function CallCard({
           ) : null}
         </div>
 
-        {/* ✅ Statuszeile */}
+        {/* Statuszeile */}
         {completed ? (
-          <span className="call-card__status">✅ Interaktion abgeschlossen</span>
+          <span className="call-card__status">
+            ✔️ Interaktion abgeschlossen
+          </span>
         ) : connected ? (
           <span className="call-card__status">
             1 Person hat Bereitschaft signalisiert
