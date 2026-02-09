@@ -17,7 +17,7 @@ export function ShowPraemien() {
       >
         ←
       </button>
-      <h1 className="page__title">Prämien eintauschen</h1>
+      <h1 className="page__title">Hier kannst du deine Punkte gegen Prämien eintauschen</h1>
 
       <h2 className="section__title">Kategorien</h2>
       <TileRow>
@@ -37,10 +37,7 @@ export function ShowPraemien() {
             onClick={() => navigate(`/praemien/${r.id}`)}
           />
         ))}
-        <RewardTile title="Kino Gutscheine" imageSrc="https://placehold.co/200x120" />
-        <RewardTile title="Theater Gutscheine" imageSrc="https://placehold.co/200x120" />
-        <RewardTile title="CBF Spende" />
-        <RewardTile title="Eintritt Hessisches Landesmuseum" imageSrc="https://placehold.co/200x120" />
+        
       </TileRow>
 
       <h2 className="section__title">Aktuell beliebt</h2>
