@@ -105,7 +105,7 @@ export function ShowPraemieDetail() {
           <b>Super, das hat geklappt.</b>
         </p>
         <p>
-          Dein Gutscheincode sollte sich nun in deinem e-Mail Postfach befinden.
+          Dein Gutscheincode sollte sich nun in deinem E-Mail Postfach befinden.
         </p>
         <p>Viel Spaß mit deiner Prämie!</p>
       </ConfirmModal>

@@ -14,7 +14,7 @@
   margin: 0 0 16px;
   font-size: 22px;
   font-weight: 900;
-  color: var(--text);
+  color: var(--blue);
 
   /* Back-Button Platz + Grid */
   padding-left: calc(16px + 44px);
