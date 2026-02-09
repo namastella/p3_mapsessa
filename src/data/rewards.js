@@ -3,6 +3,7 @@ import heiner from "../assets/pictures/Heinerliner.jpg"
 import theater from "../assets/pictures/staatstheater.jpg"
 import cbf from "../assets/pictures/cbf.webp"
 import museum from "../assets/pictures/hessischeslandesmuseum.jpg"
+import sehenswert from "../assets/pictures/mathildenhoehe.jpg"
 
 export const REWARDS = [
   {
@@ -62,4 +63,23 @@ export const REWARDS = [
     footnote: "",
     category: "Freizeit",
   },
+  {
+    id: "sehenswert",
+    shortTitle: "Erlebnis Hochzeitsturm",
+    title: "Besuche kostenfrei die Aussichtsplattform des Hochzeitturms",
+    points: 150,
+    image: sehenswert,
+    description: "Erhalte freien Eintritt in den berühmten Hochzeitsturm der Mathildenhöhe. Genieße einen unfassbaren Ausblick über die Stadt Darmstadt. ",
+    details: "Es handelt sich um einen einmaligen Eintritt. Sonntage sind von der Aktion ausgeschlossen.",
+    footnote: "",
+    category: "Freizeit",
+  },
 ];
+
+/* Reihenfolge = Anzeige-Reihenfolge */
+export const REWARD_COLLECTIONS = {
+  recommended: ["kino", "heinerliner", "theater", "cbf", "museum" ],
+  popular: ["heinerliner", "cbf", "museum", "kino"],
+  culture: ["sehenswert", "theater", "museum"],
+  mobility: ["heinerliner"],
+};
