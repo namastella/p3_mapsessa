@@ -18,25 +18,25 @@ export function Chat() {
   const call = calls.find((c) => c.id === id);
 
   const initialMessages = useMemo(() => {
-    // Dummy-Verlauf – wirkt in der Abgabe direkt “echt”
+    // Dummy-Chatverlauf
     return [
       {
         id: "m1",
-        from: "other",
+        from: "me",
         text:
           "Hi! Hab deinen Aufruf gesehen. Ich hätte morgen Zeit und könnte dir bei der Etappe helfen.",
         time: "12:10",
       },
       {
         id: "m2",
-        from: "me",
+        from: "other",
         text: "Oh wow, danke dir! Das würde mir mega helfen. Wann passt es dir?",
         time: "12:12",
       },
       {
         id: "m3",
-        from: "other",
-        text: "Gerne 🙂 Sagen wir 15:30 an der Ecke Rhönring?",
+        from: "me",
+        text: "Gerne 😊 Sagen wir 15:30 an der Ecke Rhönring?",
         time: "12:13",
       },
     ];

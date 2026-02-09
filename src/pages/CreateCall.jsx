@@ -17,9 +17,9 @@ export function CreateCall() {
   const today = useMemo(() => formatDateDE(), []);
   const [text, setText] = useState("");
 
-  // Dummy-User (später aus Profil)
-  const name = "Heiner56";
-  const handle = "@heinerniealleiner";
+  //Dummy-User
+  const name = "Stella";
+  const handle = "@stellaimdhda";
 
   const canSubmit = text.trim().length >= 20;
 

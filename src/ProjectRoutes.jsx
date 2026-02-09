@@ -28,7 +28,7 @@ export function ProjectRoutes() {
           <Route path="aufruf/neu" element={<CreateCall />} />
           <Route path="chat/:id" element={<Chat />} />
           {/* 404 Route */}
-          <Route path="*" element={<div style={{ padding: 16 }}>404 – Seite nicht gefunden</div>} />
+          <Route path="*" element={<div style={{ padding: 20, marginTop: 70 }}>404 – Oh Nein! Dieser Link war wohl nicht barrierefei. 😭</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
