@@ -24,7 +24,7 @@ export const CALLS = [
     date: "12.02.2026",
   },
   {
-    id: "call-3",
+    id: "call-4",
     name: "NanuNina",
     handle: "@ninamobil",
     text:

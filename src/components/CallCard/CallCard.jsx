@@ -3,7 +3,14 @@ import "./CallCard.css";
 import MessageIcon from "../../assets/icons/message.svg?react";
 import ConnectIcon from "../../assets/icons/connect.svg?react";
 
-export function CallCard({ call, onMessage, onConnect, connected = false }) {
+export function CallCard({
+  call,
+  onMessage,
+  onConnect,
+  onFinish,              // ✅ neu
+  connected = false,
+  completed = false,     // ✅ neu
+}) {
   return (
     <article className="call-card">
       <header className="call-card__header">
@@ -28,20 +35,37 @@ export function CallCard({ call, onMessage, onConnect, connected = false }) {
 
           <button
             type="button"
-            className={`icon-btn connect ${connected ? "is-active" : ""}`}
+            className={`icon-btn connect ${connected ? "is-active" : ""} ${
+              completed ? "is-completed" : ""
+            }`}
             aria-label="Verbinden"
             onClick={() => onConnect?.(call)}
-            disabled={connected}
+            disabled={connected || completed}
+            title={completed ? "Bereits abgeschlossen" : connected ? "Bereitschaft gesendet" : "Verbinden"}
           >
             <ConnectIcon />
           </button>
-        </div>
-        {connected ? (
-  <span className="call-card__status">
-    1 Person hat Bereitschaft signalisiert
-  </span>
-) : null}
 
+          {/* ✅ neu: nur zeigen, wenn connected aber noch nicht completed */}
+          {connected && !completed ? (
+            <button
+              type="button"
+              className="call-card__finish"
+              onClick={() => onFinish?.(call)}
+            >
+              Interaktion abschließen
+            </button>
+          ) : null}
+        </div>
+
+        {/* ✅ Statuszeile */}
+        {completed ? (
+          <span className="call-card__status">✅ Interaktion abgeschlossen</span>
+        ) : connected ? (
+          <span className="call-card__status">
+            1 Person hat Bereitschaft signalisiert
+          </span>
+        ) : null}
       </footer>
     </article>
   );

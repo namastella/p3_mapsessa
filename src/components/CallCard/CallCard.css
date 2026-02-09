@@ -105,3 +105,13 @@
 .icon-btn.connect.is-active:active {
   filter: none;
 }
+
+.call-card__finish {
+  border: none;
+  border-radius: 0;
+  padding: 8px 10px;
+  font-weight: 550;
+  cursor: pointer;
+  color: var(--surface);
+  background: var(--blue);
+}

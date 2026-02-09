@@ -1,0 +1,60 @@
+.icm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: grid;
+  place-items: end center;
+  z-index: 3000;
+}
+
+.icm-sheet {
+  width: 100%;
+  max-width: 430px;
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 18px 18px 0 0;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.icm-title {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.icm-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.icm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.icm-btn {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.icm-done {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.icm-close {
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 800;
+}
