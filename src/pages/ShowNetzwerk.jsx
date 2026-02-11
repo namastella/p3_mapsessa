@@ -69,7 +69,7 @@ export function ShowNetzwerk() {
               setSelectedCall(c);
               setModalStep("confirm");
               setConfirmedMe(false);
-              setConfirmedOther(false);
+              setConfirmedOther(true);
             }}
           />
         ))}
