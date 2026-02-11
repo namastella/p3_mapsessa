@@ -10,7 +10,7 @@ const createRoutingControl = ({ waypoints }) => {
     /* HIER: Fußverkehr statt Auto */
     router: L.Routing.osrmv1({
       serviceUrl: "https://router.project-osrm.org/route/v1",
-      profile: "foot",
+      profile: "walking",
     }),
 
     addWaypoints: false,

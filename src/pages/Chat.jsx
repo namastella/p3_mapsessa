@@ -16,8 +16,12 @@ export function Chat() {
   const { calls } = useCalls();
 
   const call = calls.find((c) => c.id === id);
+// Dummy-Profil-User
+const myHandle = "@stellaimdhda";
+const isOwnCall = call?.handle === myHandle;
 
   const initialMessages = useMemo(() => {
+    if (isOwnCall) return [];
     // Dummy-Chatverlauf
     return [
       {
