@@ -57,8 +57,6 @@ function ReportClick({ enabled, onAdd }) {
   return null;
 }
 
-
-
 export function MapHome() {
   const location = useLocation();
 
@@ -96,9 +94,6 @@ export function MapHome() {
 
   return (
     <div className="map-screen">
-
-        
-
       <MapContainer center={center} zoom={16} className="map-leaflet">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -122,18 +117,23 @@ export function MapHome() {
                 <p style={{ margin: "8px 0", fontSize: 13 }}>{b.description}</p>
 
                 <button
-  type="button"
-  className="btn btn--primary btn--block"
-  onClick={() => setRoute({ from: center, to: b.position })}
->
-                  Route starten 
+                  type="button"
+                  className="btn btn--primary btn--block"
+                  onClick={() => setRoute({ from: center, to: b.position })}
+                >
+                  Route starten
                 </button>
               </div>
             </Popup>
           </Marker>
         ))}
 
-        {route ? <RoutingControl waypoints={[route.from, route.to]} /> : null}
+        {route ? (
+          <RoutingControl
+            key={`${route.from}-${route.to}`}
+            waypoints={[route.from, route.to]}
+          />
+        ) : null}
       </MapContainer>
 
       {mode === "report" && (
@@ -179,35 +179,34 @@ export function MapHome() {
 
           <div className="report-actions">
             <button
-  type="button"
-  className="btn btn--secondary"
-  onClick={() => {
-    setDraftPos(null);
-    setMode("browse");
-  }}
->
-  Abbrechen
-</button>
+              type="button"
+              className="btn btn--secondary"
+              onClick={() => {
+                setDraftPos(null);
+                setMode("browse");
+              }}
+            >
+              Abbrechen
+            </button>
 
-<button
-  type="button"
-  className="btn btn--primary"
-  onClick={() => {
-    addBarrier({
-      title: draftTitle || "Gemeldete Barriere",
-      type: draftType,
-      position: draftPos,
-      description: "",
-    });
-    setDraftPos(null);
-    setDraftTitle("");
-    setDraftType("Bordstein"); 
-    setMode("browse");
-  }}
->
-  Speichern
-</button>
-
+            <button
+              type="button"
+              className="btn btn--primary"
+              onClick={() => {
+                addBarrier({
+                  title: draftTitle || "Gemeldete Barriere",
+                  type: draftType,
+                  position: draftPos,
+                  description: "",
+                });
+                setDraftPos(null);
+                setDraftTitle("");
+                setDraftType("Bordstein");
+                setMode("browse");
+              }}
+            >
+              Speichern
+            </button>
           </div>
         </div>
       )}

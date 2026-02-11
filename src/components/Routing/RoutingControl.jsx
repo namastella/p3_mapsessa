@@ -7,7 +7,7 @@ const createRoutingControl = ({ waypoints }) => {
   const instance = L.Routing.control({
     waypoints: waypoints.map((p) => L.latLng(p[0], p[1])),
 
-    /* 🔑 HIER: Fußverkehr statt Auto */
+    /* HIER: Fußverkehr statt Auto */
     router: L.Routing.osrmv1({
       serviceUrl: "https://router.project-osrm.org/route/v1",
       profile: "foot",
