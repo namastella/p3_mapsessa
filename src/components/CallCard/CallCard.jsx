@@ -11,6 +11,9 @@ export function CallCard({
   connected = false,
   completed = false,
 }) {
+  const myHandle = "@stellaimdhda";
+  const isOwnCall = call.handle === myHandle;
+
   return (
     <article className="call-card">
       <header className="call-card__header">
@@ -32,26 +35,26 @@ export function CallCard({
           >
             <MessageIcon />
           </button>
-
-          <button
-            type="button"
-            className={`icon-btn connect ${connected ? "is-active" : ""} ${
-              completed ? "is-completed" : ""
-            }`}
-            aria-label="Verbinden"
-            onClick={() => onConnect?.(call)}
-            disabled={connected || completed}
-            title={
-              completed
-                ? "Bereits abgeschlossen"
-                : connected
-                  ? "Bereitschaft gesendet"
-                  : "Verbinden"
-            }
+            {!isOwnCall ? (
+            <button
+              type="button"
+              className={`icon-btn connect ${connected ? "is-active" : ""} ${
+                completed ? "is-completed" : ""
+              }`}
+              aria-label="Verbinden"
+              onClick={() => onConnect?.(call)}
+              disabled={connected || completed}
+              title={
+                completed
+                  ? "Bereits abgeschlossen"
+                  : connected
+                    ? "Bereitschaft gesendet"
+                    : "Verbinden"
+              }
           >
             <ConnectIcon />
           </button>
-
+            ) : null}
           {/* nur zeigen, wenn connected aber noch nicht completed */}
           {connected && !completed ? (
             <button
